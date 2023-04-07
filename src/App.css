@@ -1,11 +1,25 @@
 body{
     margin: 0;
     box-sizing: border-box;
-    background-color:  rgb(42, 42, 53);
+    background-color:  gray;
 }
 
 .heading{
     font-size: 50px;
     font-family: sans-serif;
+}
+
+.box{
+    width: 800px;
+    background-color: yellow;
+    padding: 20px 0 ;
+    border-radius: 20px;
+    background-color:  rgb(42, 42, 53);
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 

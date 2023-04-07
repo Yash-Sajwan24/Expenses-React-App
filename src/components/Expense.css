@@ -1,16 +1,15 @@
 .container{
     display: flex;
     align-items: center;
-    font-size: 30px;
+    font-size: 15px;
     font-family: sans-serif;
     background-color: gray;
-    border-radius: 50px;
+    border-radius: 20px;
     border: 5px solid black;
     margin: 20px 30px;
 }
-.detail, .date{
-    margin-left: 20px;
-    font-weight: 600;
+.detail{
+    margin-left: 10px;
 }
 
 .price{
@@ -19,8 +18,6 @@
     border: 5px solid black;
     border-radius: 20px;
     margin-right: 10px;
-    position: absolute;
-    right: 10%;
 }
 
 .details{
