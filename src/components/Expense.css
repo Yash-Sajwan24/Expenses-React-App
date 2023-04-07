@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    background-color: gray;
+    border-radius: 50px;
+    border: 5px solid black;
+    margin: 20px 30px;
+}
+.detail, .date{
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+.price{
+    background-color: purple;
+    padding: 20px;
+    border: 5px solid black;
+    border-radius: 20px;
+    margin-right: 10px;
+    position: absolute;
+    right: 10%;
+}
+
+.details{
+    color: white;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

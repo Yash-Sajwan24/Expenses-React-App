@@ -1,0 +1,18 @@
+.date{
+    background-color:rgb(42, 42, 53);
+    padding: 8px;
+    border: 3px solid white;
+    color : white;
+    border-radius: 20px;
+    height: 90px;
+    width: 90px;
+    text-align: center;
+}
+
+.monthday{
+    font-size: 20px;
+}
+
+.day{
+    margin-bottom: 10px;
+}
