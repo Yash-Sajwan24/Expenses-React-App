@@ -1,0 +1,44 @@
+.form{
+    width: 800px;
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 600;
+    display: block;
+}
+
+label{
+    margin-right: 20px;
+    
+}
+
+.if{
+    background-color: purple;
+    font-size: 20px;
+    border: 5px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    width: 70%;
+    color: white;
+}
+
+.fields{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    border: 5px solid black;
+    border-radius: 20px;
+    background-color: gray;
+    padding: 10px;
+
+}
+
+.btn1{
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 600;
+    background-color: gray;
+    border: 5px solid white;
+    padding: 10px;
+    border-radius: 20px;
+}
