@@ -5,21 +5,15 @@ body{
 }
 
 .heading{
+    color: white;
     font-size: 50px;
     font-family: sans-serif;
+    text-align: center;
+    text-shadow: 2px 0 #424242, -2px 0 #4e4e4e, 0 2px #7c7777, 0 -2px #5f5a5a,
+               1px 1px #5c5858, -1px -1px #616060, 1px -1px #6d6c6c, -1px 1px #4b4848;
 }
 
-.box{
-    width: 800px;
-    background-color: yellow;
-    padding: 20px 0 ;
-    border-radius: 20px;
-    background-color:  rgb(42, 42, 53);
-}
 
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
+
 

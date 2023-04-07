@@ -1,5 +1,6 @@
 import './App.css';
 import Expense from './components/Expense';
+import Card from './components/Card';
 
 const App = () => {
     const expenses = [
@@ -27,15 +28,12 @@ const App = () => {
     ];
     return (
         <div>
-            <h1 className='heading'>Hello, let's see your Details</h1>
-            <div className='center'>
-            <div className='box'>
+            <h1 className='heading'>Expenses List</h1>
+            <Card>
                 <Expense expenseTitle={expenses[0].title} expensePrice={expenses[0].price}  expenseDate={expenses[0].date} />
                 <Expense expenseTitle={expenses[1].title} expensePrice={expenses[1].price}  expenseDate={expenses[1].date} />
                 <Expense expenseTitle={expenses[2].title} expensePrice={expenses[2].price}  expenseDate={expenses[2].date} />
-            </div>
-            </div>
-            
+            </Card>
             
         </div>
     )
