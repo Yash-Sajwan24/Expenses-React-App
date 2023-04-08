@@ -35,7 +35,7 @@ const ExpenseForm = (props) => {
         event.preventDefault();//prevent the page from reloading after form submitted
         const expenseData = {
             title: changeTitle,
-            amount: changeAmount, 
+            price: changeAmount, 
             date: new Date(changeDate),
         };
         props.onSaveExpense(expenseData);
