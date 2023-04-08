@@ -1,20 +1,66 @@
 import "./ExpenseForm.css";
+import { useState } from "react";
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
+    const [changeTitle, setchangeTitle] = useState('');
+    const [changeAmount, setchangeAmount] = useState('');
+    const [changeDate, setchangeDate] = useState('');
+
+    // const [userInput , setUserInput] = useState({
+    //     changeTitle: '',
+    //     changeAmount : '',
+    //     changeDate: '',
+    // })
+
+    const TitleHandler = (event) => {
+        setchangeTitle(event.target.value);
+        // setUserInput({
+        //     ...userInput,
+        //     changeTitle: event.target.value,
+        // })
+
+
+        // setUserInput((prevState) => {
+        //     return {...prevState, changeTitle: event.target.value};
+        // })
+    }
+    const AmountHandler = (event) => {
+        setchangeAmount(event.target.value);
+    }
+    const DateHandler = (event) => {
+        setchangeDate(event.target.value);
+    }
+
+    const submitHandler = (event) => {
+        event.preventDefault();//prevent the page from reloading after form submitted
+        const expenseData = {
+            title: changeTitle,
+            amount: changeAmount, 
+            date: new Date(changeDate),
+        };
+        props.onSaveExpense(expenseData);
+
+        setchangeAmount('');
+        setchangeDate('');
+        setchangeTitle('');
+    };
+
+
     return (
-        <form>
-            <div className="form">
+        <form onSubmit={submitHandler}>
+            <div className="form" >
                 <div className="fields">
                     <label >Title</label>
-                    <input placeholder="Enter the Title" className="if" type="text" />
+                    {/* value is used for clearing after submission */}
+                    <input value={changeTitle}  onChange={TitleHandler} className="if" type="text" />
                 </div>
                 <div className="fields">
                     <label>Amount</label>
-                    <input placeholder="Enter the Amount" className="if" type="number" min="0.01" step="0.01" />
+                    <input value={changeAmount} onChange={AmountHandler} className="if" type="number" min="0.01" step="0.01" />
                 </div>
                 <div className="fields">
                     <label>Date</label>
-                    <input className="if" type="date" min="2019-01-01" max="2022-12-31" />
+                    <input  value={changeDate} className="if" onChange={DateHandler} type="date" min="2019-01-01" max="2022-12-31" />
                 </div>
 
                 <div>

@@ -2,6 +2,8 @@ import './App.css';
 import Expense from './components/Expense';
 import Card from './components/Card';
 import NewExpense from './components/NewExpense/NewExpense';
+import Expenses from './components/NewExpense/Expenses';
+
 
 const App = () => {
     const expenses = [
@@ -27,11 +29,27 @@ const App = () => {
         }
 
     ];
+
+    const AddExpenseHandler = (addedExpense) => {
+        const ExpenseData = {
+            ...addedExpense
+        };
+        console.log(ExpenseData);
+    }
+
+    const addedFilterHandler = (addedYear) => {
+        console.log(addedYear);
+    } 
+
+    
+
     return (
         <div>
             <h1 className='heading'>Expenses List</h1>
-            < NewExpense />
+            < NewExpense onAddExpense={AddExpenseHandler}/>
             <Card>
+                {/* fliter by year */}
+                <Expenses onFilterChange={addedFilterHandler} />
                 <Expense expenseTitle={expenses[0].title} expensePrice={expenses[0].price}  expenseDate={expenses[0].date} />
                 <Expense expenseTitle={expenses[1].title} expensePrice={expenses[1].price}  expenseDate={expenses[1].date} />
                 <Expense expenseTitle={expenses[2].title} expensePrice={expenses[2].price}  expenseDate={expenses[2].date} />

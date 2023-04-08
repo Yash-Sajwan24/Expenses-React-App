@@ -1,0 +1,29 @@
+.filter_card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter_align{
+    background-color: gray;
+    padding: 10px;
+    border: 5px solid black;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: sans-serif;
+    border-radius: 20px;
+    align-items: center;
+}
+
+select{
+    background-color: purple;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    font-family: sans-serif;
+    border-radius: 20px;
+    border: 5px solid white;
+}
