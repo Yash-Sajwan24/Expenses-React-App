@@ -1,0 +1,30 @@
+.chartbar{
+    margin: 30px auto;
+}
+
+
+.chartbar_inner, .chartbar_fill{
+    background-color: pink;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items:end;
+    width: 30px;
+    border-radius: 10px;
+}
+
+.chartbar_inner{
+    border: 3px solid white;
+}
+
+.chartbar_fill{
+    background-color: purple;
+    width: 30px;
+}
+
+.chartbar_label{
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+}

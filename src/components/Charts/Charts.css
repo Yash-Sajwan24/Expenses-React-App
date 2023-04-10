@@ -1,0 +1,7 @@
+.charts{
+    background-color: gray;
+    margin: 2% 3% ;
+    display: flex;
+    border-radius: 20px;
+    border: 5px solid black;
+}

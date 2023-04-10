@@ -1,8 +1,9 @@
 import "./AllExpenses.css";
 import Expenses from "./NewExpense/Expenses";
-import Expense from "./Expense";
 import Card from "./Card";
 import {useState} from 'react';
+import ExepensesList from "./ExpensesList";
+import ExpensesChart from "./ExpensesChart";
 
 const AllExpenses = (props) => {
 
@@ -16,25 +17,14 @@ const AllExpenses = (props) => {
     return expense.date.getFullYear().toString() === year;
   });
 
-  let expensesContent = <p>No expenses are found.</p>;
-
-  if(filteredExpenses.length > 0){
-    expensesContent = filteredExpenses.map((expense) => (
-      <Expense
-        key={expense.id}//added this key so that the addtion is done productively
-        expenseTitle={expense.title}
-        expensePrice={expense.price}
-        expenseDate={expense.date}
-      />
-    ))
-  }
 
   return (
     <Card>
       {/* fliter by year */}
       <Expenses onFilterChange={addedFilterHandler} />
 
-      {expensesContent}
+      <ExpensesChart expenses={filteredExpenses} />
+      <ExepensesList items ={filteredExpenses} />
       {/* {filteredExpenses.length === 0 && <p>No expenses are found.</p>}
       {filteredExpenses.length > 0 && filteredExpenses.map((expense) => (
         <Expense

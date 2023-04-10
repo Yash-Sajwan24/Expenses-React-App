@@ -42,3 +42,9 @@ label{
     padding: 10px;
     border-radius: 20px;
 }
+
+.btn1:hover{
+    cursor: pointer;
+    background-color: purple;
+    color:white;
+}

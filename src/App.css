@@ -13,6 +13,17 @@ body{
                1px 1px #5c5858, -1px -1px #616060, 1px -1px #6d6c6c, -1px 1px #4b4848;
 }
 
+.background{
+    position: fixed;
+  bottom: 0;
+  right: 0;
+    z-index: -1;
+}
 
-
+.background_cash{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
 
