@@ -5,16 +5,19 @@ import {useState} from 'react';
 
 const DUMMY_EXPENSES = [
     {
+        id: 'e1',
         title: 'Car Insurance', 
         price: '267.8',
         date: new Date(2021, 1, 8),
     },
     {
+        id: 'e2',
         title: 'House Rental', 
         price: '500.8',
         date: new Date(2022, 5, 10),
     },
-    {
+    {   
+        id: 'e3',
         title: 'Healt Insurance', 
         price: '200.8',
         date: new Date(2023, 2, 12),
