@@ -1,22 +1,26 @@
 import "./AllExpenses.css";
 import Expenses from "./NewExpense/Expenses";
 import Card from "./Card";
-import {useState} from 'react';
+import { useState } from "react";
 import ExepensesList from "./ExpensesList";
 import ExpensesChart from "./ExpensesChart";
 
 const AllExpenses = (props) => {
-
-  const [year, setYear] = useState('2020');//initial year
+  const [year, setYear] = useState("2020"); //initial year
 
   const addedFilterHandler = (addedYear) => {
     setYear(addedYear);
   };
 
-  const filteredExpenses = props.items.filter(expense => {
+  const filteredExpenses = props.items.filter((expense) => {
     return expense.date.getFullYear().toString() === year;
   });
 
+  const sortedExpenses = filteredExpenses.sort(
+      (a, b) =>
+        a.date - b.date
+    );
+    
 
   return (
     <Card>
@@ -24,7 +28,7 @@ const AllExpenses = (props) => {
       <Expenses onFilterChange={addedFilterHandler} />
 
       <ExpensesChart expenses={filteredExpenses} />
-      <ExepensesList items ={filteredExpenses} />
+      <ExepensesList items={sortedExpenses} />
       {/* {filteredExpenses.length === 0 && <p>No expenses are found.</p>}
       {filteredExpenses.length > 0 && filteredExpenses.map((expense) => (
         <Expense
@@ -34,8 +38,6 @@ const AllExpenses = (props) => {
           expenseDate={expense.date}
         />
       ))} */}
-
-
     </Card>
   );
 };

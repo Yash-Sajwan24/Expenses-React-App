@@ -52,15 +52,15 @@ const ExpenseForm = (props) => {
                 <div className="fields">
                     <label >Title</label>
                     {/* value is used for clearing after submission */}
-                    <input value={changeTitle}  onChange={TitleHandler} className="if" type="text" />
+                    <input value={changeTitle}  onChange={TitleHandler} required className="if" type="text" />
                 </div>
                 <div className="fields">
                     <label>Amount</label>
-                    <input value={changeAmount} onChange={AmountHandler} className="if" type="number" min="0.01" step="0.01" />
+                    <input value={changeAmount} onChange={AmountHandler} required  className="if" type="number" min="0.01" step="0.01" />
                 </div>
                 <div className="fields">
                     <label>Date</label>
-                    <input  value={changeDate} className="if" onChange={DateHandler} type="date" min="2019-01-01" max="2023-12-31" />
+                    <input  value={changeDate} className="if" onChange={DateHandler} required type="date" min="2019-01-01" max="2023-12-31" />
                 </div>
 
                 <div>

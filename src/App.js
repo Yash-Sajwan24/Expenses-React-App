@@ -46,7 +46,7 @@ const App = () => {
         <div className="background_cash">
           <Lottie animationData={cash} />
         </div>
-        <h1 className="heading">Expenses List</h1>
+        <h1 className="heading">Expenses</h1>
         <NewExpense onAddExpense={AddExpenseHandler} />
         <AllExpenses items={expenses} />
       </div>

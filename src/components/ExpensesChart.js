@@ -5,8 +5,8 @@ const ExpensesChart = (props) => {
     const chartDataPoints = [
         {label : 'Jan', value:0},
         {label : 'Feb', value:0},
-        {label : 'Apr', value:0},
         {label : 'Mar', value:0},
+        {label : 'Apr', value:0},
         {label : 'May', value:0},
         {label : 'Jun', value:0},
         {label : 'Jul', value:0},
@@ -21,6 +21,9 @@ const ExpensesChart = (props) => {
     for(const expense of props.expenses){
         const expenseMonth = expense.date.getMonth();//starting at 0 -> January
         chartDataPoints[expenseMonth].value = parseInt(chartDataPoints[expenseMonth].value, 10) + parseInt(expense.price, 10) ;
+        console.log(expense);
+        console.log(chartDataPoints[expenseMonth].value);
+        console.log(expenseMonth);
         //parseInt to convert string to integer so that same month can add value 
         //parseInt(value, base)
     }

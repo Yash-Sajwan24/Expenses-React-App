@@ -5,12 +5,12 @@ body{
 }
 
 .heading{
-    color: white;
+    /* color: purple; */
     font-size: 50px;
     font-family: sans-serif;
     text-align: center;
-    text-shadow: 2px 0 #424242, -2px 0 #4e4e4e, 0 2px #7c7777, 0 -2px #5f5a5a,
-               1px 1px #5c5858, -1px -1px #616060, 1px -1px #6d6c6c, -1px 1px #4b4848;
+    /* text-shadow: 2px 0 #424242, -2px 0 #4e4e4e, 0 2px #7c7777, 0 -2px #5f5a5a,
+               1px 1px #5c5858, -1px -1px #616060, 1px -1px #6d6c6c, -1px 1px #4b4848; */
 }
 
 .background{

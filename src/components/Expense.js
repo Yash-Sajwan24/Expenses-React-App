@@ -14,7 +14,7 @@ const Expense = (props) => {
         <div className='container'> 
             <ExpenseDate expenseDate={props.expenseDate} />
             <div className='details'>
-                <h2 className='detail'>{props.expenseTitle}</h2>
+                <h2 className='detail'>{title}</h2>
                 <div className='price'>${props.expensePrice}</div>
             </div>
             <button onClick={clickHandler}>Title Changed</button>
